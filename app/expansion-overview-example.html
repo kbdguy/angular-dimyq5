@@ -1,17 +1,24 @@
 
   <mat-expansion-panel (opened)="panelOpenState=true" (closed)="panelOpenState=false">
-    <mat-expansion-panel-header collapsedHeight="25px">
-      <div class="my-pnl-hdr">
+    <mat-expansion-panel-header collapsedHeight="23px" expandedHeight="23px">
+      <!-- <div class="my-pnl-hdr">
         <div class="my-pnl-hdr-item" (click)="setSelection($event,'filter')">
           filter
         </div>
         <div class="my-pnl-hdr-item" (click)="setSelection($event,'action')">
           action
         </div>
-      </div>
+      </div> -->
+      <mat-tab-group [(selectedIndex)]="selectedIndex" (click)="onTabClick($event)">
+        <mat-tab label="First"></mat-tab>
+        <mat-tab label="Second"></mat-tab>
+        <mat-tab label="Third"></mat-tab>
+      </mat-tab-group>      
     </mat-expansion-panel-header>
 
-    {{ hdrSelection }}
+     <div style="margin-top:1em">
+       {{selectedIndex}}
+       </div>
   </mat-expansion-panel>
   
 <div style="margin-top:2em">

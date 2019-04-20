@@ -12,6 +12,19 @@ export class ExpansionOverviewExample {
   panelOpenState = false;
   hdrSelection = "notyet";
 
+  selectedIndex = 0;
+  selectedIndexChange(e) {
+    this.selectedIndex = e;
+  }
+  selectedTabChanged(e) {
+    console.log("selectedTabChanged",e);
+  }
+
+  onTabClick(e:Event) {
+    console.log("onTabClick",e);
+    if (this.panelOpenState) e.stopPropagation();
+  }
+
   setSelection(e:Event, v:string){
     this.hdrSelection = v;
     if (this.panelOpenState)
