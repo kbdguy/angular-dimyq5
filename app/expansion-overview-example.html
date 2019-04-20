@@ -1,12 +1,12 @@
 
   <mat-expansion-panel (opened)="panelOpenState=true" (closed)="panelOpenState=false">
-    <mat-expansion-panel-header>
+    <mat-expansion-panel-header collapsedHeight="25px">
       <div class="my-pnl-hdr">
-        <div class="my-pnl-hdr-item" (click)="setSelection($event,'foo')">
-          foo
+        <div class="my-pnl-hdr-item" (click)="setSelection($event,'filter')">
+          filter
         </div>
-        <div class="my-pnl-hdr-item" (click)="setSelection($event,'bar')">
-          bar
+        <div class="my-pnl-hdr-item" (click)="setSelection($event,'action')">
+          action
         </div>
       </div>
     </mat-expansion-panel-header>
