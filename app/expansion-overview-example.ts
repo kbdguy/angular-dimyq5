@@ -9,27 +9,10 @@ import {Component} from '@angular/core';
   styleUrls: ['expansion-overview-example.css'],
 })
 export class ExpansionOverviewExample {
-  panelOpenState = false;
-  hdrSelection = "notyet";
-
+  topPanelOpenState = false;
   selectedIndex = 0;
-  selectedIndexChange(e) {
-    this.selectedIndex = e;
-  }
-  selectedTabChanged(e) {
-    console.log("selectedTabChanged",e);
-  }
-
   onTabClick(e:Event) {
-    console.log("onTabClick",e);
-    if (this.panelOpenState) e.stopPropagation();
-  }
-
-  setSelection(e:Event, v:string){
-    this.hdrSelection = v;
-    if (this.panelOpenState)
-      e.stopPropagation();
-    //doesn't work to stop expansion toggle: return false;
+    if (this.topPanelOpenState) e.stopPropagation();
   }
 }
 

@@ -1,14 +1,6 @@
 
-  <mat-expansion-panel (opened)="panelOpenState=true" (closed)="panelOpenState=false">
+  <mat-expansion-panel (opened)="topPanelOpenState=true" (closed)="topPanelOpenState=false">
     <mat-expansion-panel-header collapsedHeight="23px" expandedHeight="23px">
-      <!-- <div class="my-pnl-hdr">
-        <div class="my-pnl-hdr-item" (click)="setSelection($event,'filter')">
-          filter
-        </div>
-        <div class="my-pnl-hdr-item" (click)="setSelection($event,'action')">
-          action
-        </div>
-      </div> -->
       <mat-tab-group [(selectedIndex)]="selectedIndex" (click)="onTabClick($event)">
         <mat-tab label="First"></mat-tab>
         <mat-tab label="Second"></mat-tab>
@@ -16,13 +8,18 @@
       </mat-tab-group>      
     </mat-expansion-panel-header>
 
-     <div style="margin-top:1em">
-       {{selectedIndex}}
+     <div style="margin-top:2em">
+       <div *ngIf="selectedIndex==0">
+       content for index {{selectedIndex}}
        </div>
+       <div *ngIf="selectedIndex==1">
+        content for index 1 ({{selectedIndex}})
+       </div>
+      </div>
   </mat-expansion-panel>
   
 <div style="margin-top:2em">
-  MAIN CONTENT {{ panelOpenState }}
+  MAIN CONTENT {{ topPanelOpenState }}
   </div>
 
 <!-- Copyright 2019 Google Inc. All Rights Reserved.
