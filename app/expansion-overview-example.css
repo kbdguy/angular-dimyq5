@@ -3,5 +3,7 @@
   display:flex;
 }
 .my-pnl-hdr-item {
-  margin-right:2em;
+  
+  padding: 1px 10px;
+  border: 1px solid gray;
 }

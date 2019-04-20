@@ -14,7 +14,8 @@ export class ExpansionOverviewExample {
 
   setSelection(e:Event, v:string){
     this.hdrSelection = v;
-    e.stopPropagation();
+    if (this.panelOpenState)
+      e.stopPropagation();
     //doesn't work to stop expansion toggle: return false;
   }
 }
