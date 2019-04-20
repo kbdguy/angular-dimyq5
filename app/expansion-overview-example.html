@@ -1,5 +1,5 @@
 
-  <mat-expansion-panel>
+  <mat-expansion-panel (opened)="panelOpenState=true" (closed)="panelOpenState=false">
     <mat-expansion-panel-header>
       <div class="my-pnl-hdr">
         <div class="my-pnl-hdr-item" (click)="setSelection($event,'foo')">
@@ -15,7 +15,7 @@
   </mat-expansion-panel>
   
 <div style="margin-top:2em">
-  CONTENT
+  CONTENT {{ panelOpenState }}
   </div>
 
 <!-- Copyright 2019 Google Inc. All Rights Reserved.

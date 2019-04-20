@@ -10,11 +10,12 @@ import {Component} from '@angular/core';
 })
 export class ExpansionOverviewExample {
   panelOpenState = false;
-  hdrSelection = "foo";
+  hdrSelection = "notyet";
 
-  setSelectione(e:Event, v:string):void {
+  setSelection(e:Event, v:string){
     this.hdrSelection = v;
     e.stopPropagation();
+    //doesn't work to stop expansion toggle: return false;
   }
 }
 
