@@ -1,21 +1,17 @@
 
   <mat-expansion-panel>
     <mat-expansion-panel-header>
-      <mat-panel-title>
-        Personal data
-      </mat-panel-title>
-      <mat-panel-description>
-        Type your name and age
-      </mat-panel-description>
+      <div class="my-pnl-hdr">
+        <div class="my-pnl-hdr-item" (click)="setSelection($event,'foo')">
+          foo
+        </div>
+        <div class="my-pnl-hdr-item" (click)="setSelection($event,'bar')">
+          bar
+        </div>
+      </div>
     </mat-expansion-panel-header>
 
-    <mat-form-field>
-      <input matInput placeholder="First name">
-    </mat-form-field>
-
-    <mat-form-field>
-      <input matInput placeholder="Age">
-    </mat-form-field>
+    {{ hdrSelection }}
   </mat-expansion-panel>
   
 <div style="margin-top:2em">

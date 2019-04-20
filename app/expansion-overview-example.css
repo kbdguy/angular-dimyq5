@@ -1,1 +1,7 @@
 /** No CSS for this example */
+.my-pnl-hdr {
+  display:flex;
+}
+.my-pnl-hdr-item {
+  margin-right:2em;
+}

@@ -10,7 +10,14 @@ import {Component} from '@angular/core';
 })
 export class ExpansionOverviewExample {
   panelOpenState = false;
+  hdrSelection = "foo";
+
+  setSelectione(e:Event, v:string):void {
+    this.hdrSelection = v;
+    e.stopPropagation();
+  }
 }
+
 
 
 /**  Copyright 2019 Google Inc. All Rights Reserved.
